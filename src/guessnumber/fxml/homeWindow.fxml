@@ -1,58 +1,59 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.text.*?>
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane prefHeight="426.0" prefWidth="518.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="guessnumber.controller.homeWindowController">
-   <children>
-      <AnchorPane fx:id="gameZone" layoutY="54.0" prefHeight="319.0" prefWidth="556.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
-         <children>
-            <AnchorPane fx:id="gameControls" layoutX="14.0" layoutY="14.0" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="10.0">
-               <children>
-                  <TextField fx:id="textField" layoutY="264.0" prefHeight="31.0" prefWidth="168.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" />
-                  <Button fx:id="btn_check" layoutX="175.0" layoutY="264.0" mnemonicParsing="false" onMouseClicked="#checkNumber" text="Проверить" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="0.0" />
-                  <TextArea fx:id="textArea" editable="false" prefHeight="254.0" prefWidth="271.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
-               </children>
-            </AnchorPane>
-            <VBox fx:id="showScore" alignment="CENTER" layoutX="335.0" layoutY="72.0" prefHeight="92.0" prefWidth="255.0" spacing="5.0" AnchorPane.bottomAnchor="165.0" AnchorPane.leftAnchor="295.0" AnchorPane.rightAnchor="6.0">
-               <children>
-                  <Label layoutX="353.0" layoutY="59.0" text="Количество попыток" />
-                  <Label fx:id="lb_score" alignment="CENTER" layoutX="353.0" layoutY="91.0" prefHeight="21.0" prefWidth="116.0" />
-               </children>
-            </VBox>
-            <VBox fx:id="showMassage" alignment="CENTER" layoutX="294.0" layoutY="163.0" prefHeight="147.0" prefWidth="257.0" spacing="5.0" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="295.0" AnchorPane.rightAnchor="6.0">
-               <children>
-                  <Label fx:id="lb_massage" alignment="CENTER" layoutX="340.0" layoutY="201.0" prefHeight="31.0" prefWidth="159.0" wrapText="true">
-                     <font>
-                        <Font size="20.0" />
-                     </font></Label>
-                  <Label fx:id="lb_number" layoutX="359.0" layoutY="232.0" />
-               </children>
-            </VBox>
-         </children>
+<AnchorPane prefHeight="426.0" prefWidth="518.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="guessnumber.controller.HomeWindowController">
+   <AnchorPane fx:id="gameZone" layoutY="54.0" prefHeight="319.0" prefWidth="556.0" AnchorPane.bottomAnchor="0.0"
+               AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+      <AnchorPane fx:id="gameControls" layoutX="14.0" layoutY="14.0" AnchorPane.bottomAnchor="10.0"
+                  AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="10.0">
+         <TextField fx:id="textField" layoutY="264.0" prefHeight="31.0" prefWidth="168.0"
+                    AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0"/>
+         <Button fx:id="btn_check" layoutX="175.0" layoutY="264.0" mnemonicParsing="false"
+                 onMouseClicked="#checkNumber" text="Проверить" AnchorPane.bottomAnchor="0.0"
+                 AnchorPane.rightAnchor="0.0"/>
+         <TextArea fx:id="textArea" editable="false" prefHeight="254.0" prefWidth="271.0"
+                   AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0"/>
       </AnchorPane>
-      <AnchorPane layoutX="272.0" layoutY="14.0" prefHeight="50.0" prefWidth="250.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0">
-         <children>
-            <Label fx:id="lb_minValueSlider" layoutY="24.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="5.0" />
-            <Label fx:id="lb_maxValueSlider" alignment="CENTER_RIGHT" layoutX="208.0" layoutY="24.0" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="5.0" />
-            <Slider fx:id="slider" min="10.0" prefHeight="24.0" prefWidth="233.0" value="30.0" AnchorPane.leftAnchor="3.0" AnchorPane.rightAnchor="3.0" AnchorPane.topAnchor="3.0" />
-            <HBox alignment="CENTER" layoutX="84.0" layoutY="37.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
-               <children>
-                  <Label fx:id="lb_valueSlider2" layoutX="84.0" layoutY="37.0" />
-               </children>
-            </HBox>
-         </children>
-      </AnchorPane>
-      <HBox alignment="CENTER" layoutX="-1.0" layoutY="60.0" prefHeight="40.0" prefWidth="518.0" AnchorPane.leftAnchor="-1.0" AnchorPane.rightAnchor="1.0">
-         <children>
-            <Button fx:id="btn_startGame" layoutX="202.0" layoutY="72.0" mnemonicParsing="false" onMouseClicked="#startGame" text="Начать новую игру" />
-         </children>
-      </HBox>
-      <Label layoutX="14.0" layoutY="25.0" prefHeight="21.0" prefWidth="125.0" text="Диапазон от 0 до " AnchorPane.leftAnchor="14.0" AnchorPane.topAnchor="25.0" />
-      <Label fx:id="lb_valueSlider1" layoutX="139.0" layoutY="25.0" />
-   </children>
+      <VBox fx:id="showScore" alignment="CENTER" layoutX="335.0" layoutY="72.0" prefHeight="92.0" prefWidth="255.0"
+            spacing="5.0" AnchorPane.bottomAnchor="165.0" AnchorPane.leftAnchor="295.0" AnchorPane.rightAnchor="6.0">
+         <Label layoutX="353.0" layoutY="59.0" text="Количество попыток"/>
+         <Label fx:id="lb_score" alignment="CENTER" layoutX="353.0" layoutY="91.0" prefHeight="21.0"
+                prefWidth="116.0"/>
+      </VBox>
+      <VBox fx:id="showMassage" alignment="CENTER" layoutX="294.0" layoutY="163.0" prefHeight="147.0"
+            prefWidth="257.0" spacing="5.0" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="295.0"
+            AnchorPane.rightAnchor="6.0">
+         <Label fx:id="lb_massage" alignment="CENTER" layoutX="340.0" layoutY="201.0" prefHeight="31.0"
+                prefWidth="159.0" wrapText="true">
+            <font>
+               <Font size="20.0"/>
+            </font>
+         </Label>
+         <Label fx:id="lb_number" layoutX="359.0" layoutY="232.0"/>
+      </VBox>
+   </AnchorPane>
+   <AnchorPane layoutX="272.0" layoutY="14.0" prefHeight="50.0" prefWidth="250.0" AnchorPane.rightAnchor="10.0"
+               AnchorPane.topAnchor="10.0">
+         <Label fx:id="lb_minValueSlider" layoutY="24.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="5.0"/>
+         <Label fx:id="lb_maxValueSlider" alignment="CENTER_RIGHT" layoutX="208.0" layoutY="24.0"
+                AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="5.0"/>
+         <Slider fx:id="slider" min="10.0" prefHeight="24.0" prefWidth="233.0" value="30.0" AnchorPane.leftAnchor="3.0"
+                 AnchorPane.rightAnchor="3.0" AnchorPane.topAnchor="3.0"/>
+         <HBox alignment="CENTER" layoutX="84.0" layoutY="37.0" AnchorPane.bottomAnchor="0.0"
+               AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+               <Label fx:id="lb_valueSlider2" layoutX="84.0" layoutY="37.0"/>
+         </HBox>
+   </AnchorPane>
+   <HBox alignment="CENTER" layoutX="-1.0" layoutY="60.0" prefHeight="40.0" prefWidth="518.0"
+         AnchorPane.leftAnchor="-1.0" AnchorPane.rightAnchor="1.0">
+         <Button fx:id="btn_startGame" layoutX="202.0" layoutY="72.0" mnemonicParsing="false"
+                 onMouseClicked="#startGame" text="Начать новую игру"/>
+   </HBox>
+   <Label layoutX="14.0" layoutY="25.0" prefHeight="21.0" prefWidth="125.0" text="Диапазон от 0 до "
+          AnchorPane.leftAnchor="14.0" AnchorPane.topAnchor="25.0"/>
+   <Label fx:id="lb_valueSlider1" layoutX="139.0" layoutY="25.0"/>
 </AnchorPane>

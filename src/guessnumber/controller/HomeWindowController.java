@@ -7,14 +7,12 @@ import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.VBox;
 import javafx.scene.paint.Color;
-import javafx.scene.paint.Paint;
 
 import java.net.URL;
-import java.nio.file.Path;
 import java.util.Random;
 import java.util.ResourceBundle;
 
-public class homeWindowController implements Initializable {
+public class HomeWindowController implements Initializable {
 
     @FXML
     private Slider slider;
@@ -64,8 +62,8 @@ public class homeWindowController implements Initializable {
     @FXML
     private TextArea textArea;
 
-    int score = 7;
-    int number;
+    private int score = 7;
+    private int number;
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
